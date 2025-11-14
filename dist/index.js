@@ -14,12 +14,24 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __assign = (this && this.__assign) || function () {
+    __assign = Object.assign || function(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+                t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Piece = exports.allOptions = exports.OptionContext = exports.Option = exports.AvatarStyle = exports.Avatar = void 0;
-var PropTypes = require("prop-types");
+var jsx_runtime_1 = require("react/jsx-runtime");
 var React = require("react");
 var avatar_1 = require("./avatar");
 var options_1 = require("./options");
+var OptionContextProvider_1 = require("./options/OptionContextProvider");
 var avatar_2 = require("./avatar");
 Object.defineProperty(exports, "Avatar", { enumerable: true, get: function () { return avatar_2.default; } });
 Object.defineProperty(exports, "AvatarStyle", { enumerable: true, get: function () { return avatar_2.AvatarStyle; } });
@@ -35,18 +47,21 @@ var AvatarComponent = /** @class */ (function (_super) {
         _this.optionContext = new options_1.OptionContext(options_1.allOptions);
         return _this;
     }
-    AvatarComponent.prototype.getChildContext = function () {
-        return { optionContext: this.optionContext };
-    };
-    AvatarComponent.prototype.UNSAFE_componentWillMount = function () {
+    AvatarComponent.prototype.componentDidMount = function () {
         this.updateOptionContext(this.props);
     };
-    AvatarComponent.prototype.UNSAFE_componentWillReceiveProps = function (nextProps) {
-        this.updateOptionContext(nextProps);
+    AvatarComponent.prototype.componentDidUpdate = function (prevProps) {
+        var _this = this;
+        var hasChanged = options_1.allOptions.some(function (option) {
+            return prevProps[option.key] !== _this.props[option.key];
+        }) || prevProps.avatarStyle !== this.props.avatarStyle;
+        if (hasChanged) {
+            this.updateOptionContext(this.props);
+        }
     };
     AvatarComponent.prototype.render = function () {
         var _a = this.props, avatarStyle = _a.avatarStyle, style = _a.style, className = _a.className;
-        return React.createElement(avatar_1.default, { avatarStyle: avatarStyle, style: style, className: className });
+        return (jsx_runtime_1.jsx(OptionContextProvider_1.OptionContextProvider, __assign({ optionContext: this.optionContext }, { children: jsx_runtime_1.jsx(avatar_1.default, { avatarStyle: avatarStyle, style: style, className: className }, void 0) }), void 0));
     };
     AvatarComponent.prototype.updateOptionContext = function (props) {
         var data = {};
@@ -60,9 +75,6 @@ var AvatarComponent = /** @class */ (function (_super) {
         }
         this.optionContext.setData(data);
     };
-    AvatarComponent.childContextTypes = {
-        optionContext: PropTypes.instanceOf(options_1.OptionContext)
-    };
     return AvatarComponent;
 }(React.Component));
 exports.default = AvatarComponent;
@@ -73,18 +85,23 @@ var Piece = /** @class */ (function (_super) {
         _this.optionContext = new options_1.OptionContext(options_1.allOptions);
         return _this;
     }
-    Piece.prototype.getChildContext = function () {
-        return { optionContext: this.optionContext };
-    };
-    Piece.prototype.UNSAFE_componentWillMount = function () {
+    Piece.prototype.componentDidMount = function () {
         this.updateOptionContext(this.props);
     };
-    Piece.prototype.UNSAFE_componentWillReceiveProps = function (nextProps) {
-        this.updateOptionContext(nextProps);
+    Piece.prototype.componentDidUpdate = function (prevProps) {
+        var _this = this;
+        var hasChanged = options_1.allOptions.some(function (option) {
+            return prevProps[option.key] !== _this.props[option.key];
+        }) || prevProps.pieceType !== this.props.pieceType ||
+            prevProps.pieceSize !== this.props.pieceSize ||
+            prevProps.viewBox !== this.props.viewBox;
+        if (hasChanged) {
+            this.updateOptionContext(this.props);
+        }
     };
     Piece.prototype.render = function () {
         var _a = this.props, avatarStyle = _a.avatarStyle, style = _a.style, pieceType = _a.pieceType, pieceSize = _a.pieceSize, viewBox = _a.viewBox;
-        return React.createElement(piece_1.default, { avatarStyle: avatarStyle, style: style, pieceType: pieceType, pieceSize: pieceSize, viewBox: viewBox });
+        return (jsx_runtime_1.jsx(OptionContextProvider_1.OptionContextProvider, __assign({ optionContext: this.optionContext }, { children: jsx_runtime_1.jsx(piece_1.default, { avatarStyle: avatarStyle, style: style, pieceType: pieceType, pieceSize: pieceSize, viewBox: viewBox }, void 0) }), void 0));
     };
     Piece.prototype.updateOptionContext = function (props) {
         var data = {};
@@ -97,9 +114,6 @@ var Piece = /** @class */ (function (_super) {
             data[option.key] = value;
         }
         this.optionContext.setData(data);
-    };
-    Piece.childContextTypes = {
-        optionContext: PropTypes.instanceOf(options_1.OptionContext)
     };
     return Piece;
 }(React.Component));

@@ -14,7 +14,19 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __assign = (this && this.__assign) || function () {
+    __assign = Object.assign || function(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+                t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
 Object.defineProperty(exports, "__esModule", { value: true });
+var jsx_runtime_1 = require("react/jsx-runtime");
 var React = require("react");
 var lodash_1 = require("lodash");
 var facialHair_1 = require("./facialHair");
@@ -32,28 +44,7 @@ var ShortHairTheCaesar = /** @class */ (function (_super) {
     }
     ShortHairTheCaesar.prototype.render = function () {
         var _a = this, filter1 = _a.filter1, mask1 = _a.mask1, mask2 = _a.mask2, path1 = _a.path1, path2 = _a.path2;
-        return (React.createElement("g", { id: 'Top', strokeWidth: '1', fillRule: 'evenodd' },
-            React.createElement("defs", null,
-                React.createElement("rect", { id: path1, x: '0', y: '0', width: '264', height: '280' }),
-                React.createElement("path", { d: 'M1,64 C1.34685629,65.488448 2.67275588,65.2226722 3,64 C2.53726005,62.445722 6.29594493,35.2480719 16,28 C19.618222,25.4833872 39.0082164,23.2319099 58.3126144,23.245568 C77.4086061,23.2590787 96.4208396,25.5105561 100,28 C109.704055,35.2480719 113.46274,62.445722 113,64 C113.327244,65.2226722 114.653144,65.488448 115,64 C115.719178,53.7019177 115,0.274362825 58,1 C1,1.72563718 0.280821545,53.7019177 1,64 Z', id: path2 }),
-                React.createElement("filter", { x: '-0.8%', y: '-2.0%', width: '101.5%', height: '108.0%', filterUnits: 'objectBoundingBox', id: filter1 },
-                    React.createElement("feOffset", { dx: '0', dy: '2', in: 'SourceAlpha', result: 'shadowOffsetOuter1' }),
-                    React.createElement("feColorMatrix", { values: '0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.16 0', type: 'matrix', in: 'shadowOffsetOuter1', result: 'shadowMatrixOuter1' }),
-                    React.createElement("feMerge", null,
-                        React.createElement("feMergeNode", { in: 'shadowMatrixOuter1' }),
-                        React.createElement("feMergeNode", { in: 'SourceGraphic' })))),
-            React.createElement("mask", { id: mask1, fill: 'white' },
-                React.createElement("use", { xlinkHref: '#' + path1 })),
-            React.createElement("g", { id: 'Mask' }),
-            React.createElement("g", { id: 'Top/Short-Hair/The-Caesar', mask: "url(#" + mask1 + ")" },
-                React.createElement("g", { transform: 'translate(-1.000000, 0.000000)' },
-                    React.createElement(facialHair_1.default, null),
-                    React.createElement("g", { id: 'Hair', strokeWidth: '1', fillRule: 'evenodd', transform: 'translate(75.000000, 34.000000)' },
-                        React.createElement("mask", { id: mask2, fill: 'white' },
-                            React.createElement("use", { xlinkHref: '#' + path2 })),
-                        React.createElement("use", { id: 'Caesar', fill: '#28354B', xlinkHref: '#' + path2 }),
-                        React.createElement(HairColor_1.default, { maskID: mask2 })),
-                    this.props.children))));
+        return (jsx_runtime_1.jsxs("g", __assign({ id: 'Top', strokeWidth: '1', fillRule: 'evenodd' }, { children: [jsx_runtime_1.jsxs("defs", { children: [jsx_runtime_1.jsx("rect", { id: path1, x: '0', y: '0', width: '264', height: '280' }, void 0), jsx_runtime_1.jsx("path", { d: 'M1,64 C1.34685629,65.488448 2.67275588,65.2226722 3,64 C2.53726005,62.445722 6.29594493,35.2480719 16,28 C19.618222,25.4833872 39.0082164,23.2319099 58.3126144,23.245568 C77.4086061,23.2590787 96.4208396,25.5105561 100,28 C109.704055,35.2480719 113.46274,62.445722 113,64 C113.327244,65.2226722 114.653144,65.488448 115,64 C115.719178,53.7019177 115,0.274362825 58,1 C1,1.72563718 0.280821545,53.7019177 1,64 Z', id: path2 }, void 0), jsx_runtime_1.jsxs("filter", __assign({ x: '-0.8%', y: '-2.0%', width: '101.5%', height: '108.0%', filterUnits: 'objectBoundingBox', id: filter1 }, { children: [jsx_runtime_1.jsx("feOffset", { dx: '0', dy: '2', in: 'SourceAlpha', result: 'shadowOffsetOuter1' }, void 0), jsx_runtime_1.jsx("feColorMatrix", { values: '0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.16 0', type: 'matrix', in: 'shadowOffsetOuter1', result: 'shadowMatrixOuter1' }, void 0), jsx_runtime_1.jsxs("feMerge", { children: [jsx_runtime_1.jsx("feMergeNode", { in: 'shadowMatrixOuter1' }, void 0), jsx_runtime_1.jsx("feMergeNode", { in: 'SourceGraphic' }, void 0)] }, void 0)] }), void 0)] }, void 0), jsx_runtime_1.jsx("mask", __assign({ id: mask1, fill: 'white' }, { children: jsx_runtime_1.jsx("use", { xlinkHref: '#' + path1 }, void 0) }), void 0), jsx_runtime_1.jsx("g", { id: 'Mask' }, void 0), jsx_runtime_1.jsx("g", __assign({ id: 'Top/Short-Hair/The-Caesar', mask: "url(#" + mask1 + ")" }, { children: jsx_runtime_1.jsxs("g", __assign({ transform: 'translate(-1.000000, 0.000000)' }, { children: [jsx_runtime_1.jsx(facialHair_1.default, {}, void 0), jsx_runtime_1.jsxs("g", __assign({ id: 'Hair', strokeWidth: '1', fillRule: 'evenodd', transform: 'translate(75.000000, 34.000000)' }, { children: [jsx_runtime_1.jsx("mask", __assign({ id: mask2, fill: 'white' }, { children: jsx_runtime_1.jsx("use", { xlinkHref: '#' + path2 }, void 0) }), void 0), jsx_runtime_1.jsx("use", { id: 'Caesar', fill: '#28354B', xlinkHref: '#' + path2 }, void 0), jsx_runtime_1.jsx(HairColor_1.default, { maskID: mask2 }, void 0)] }), void 0), this.props.children] }), void 0) }), void 0)] }), void 0));
     };
     ShortHairTheCaesar.optionValue = 'ShortHairTheCaesar';
     return ShortHairTheCaesar;

@@ -14,8 +14,20 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __assign = (this && this.__assign) || function () {
+    __assign = Object.assign || function(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+                t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.AvatarStyle = void 0;
+var jsx_runtime_1 = require("react/jsx-runtime");
 var React = require("react");
 var clothes_1 = require("./clothes");
 var Graphics_1 = require("./clothes/Graphics");
@@ -38,18 +50,8 @@ var PieceComponent = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     PieceComponent.prototype.render = function () {
-        return (React.createElement("svg", { style: this.props.style, width: this.props.pieceSize + "px", height: this.props.pieceSize + "px", viewBox: this.props.viewBox || "0 0 264 280", version: "1.1", xmlns: "http://www.w3.org/2000/svg", xmlnsXlink: "http://www.w3.org/1999/xlink" },
-            this.props.pieceType === 'top' && React.createElement(top_1.default, null),
-            this.props.pieceType === 'clothe' && React.createElement(clothes_1.default, null),
-            this.props.pieceType === 'graphics' && React.createElement(Graphics_1.default, { maskID: "1234" }),
-            (this.props.pieceType === 'accessories' ||
-                this.props.pieceType === 'accesories') && React.createElement(accessories_1.default, null),
-            this.props.pieceType === 'facialHair' && React.createElement(facialHair_1.default, null),
-            this.props.pieceType === 'eyes' && React.createElement(eyes_1.default, null),
-            this.props.pieceType === 'eyebrows' && React.createElement(eyebrow_1.default, null),
-            this.props.pieceType === 'mouth' && React.createElement(mouth_1.default, null),
-            this.props.pieceType === 'nose' && React.createElement(nose_1.default, null),
-            this.props.pieceType === 'skin' && React.createElement(Skin_1.default, { maskID: "5678" })));
+        return (jsx_runtime_1.jsxs("svg", __assign({ style: this.props.style, width: this.props.pieceSize + "px", height: this.props.pieceSize + "px", viewBox: this.props.viewBox || "0 0 264 280", version: "1.1", xmlns: "http://www.w3.org/2000/svg", xmlnsXlink: "http://www.w3.org/1999/xlink" }, { children: [this.props.pieceType === 'top' && jsx_runtime_1.jsx(top_1.default, {}, void 0), this.props.pieceType === 'clothe' && jsx_runtime_1.jsx(clothes_1.default, {}, void 0), this.props.pieceType === 'graphics' && jsx_runtime_1.jsx(Graphics_1.default, { maskID: "1234" }, void 0), (this.props.pieceType === 'accessories' ||
+                    this.props.pieceType === 'accesories') && jsx_runtime_1.jsx(accessories_1.default, {}, void 0), this.props.pieceType === 'facialHair' && jsx_runtime_1.jsx(facialHair_1.default, {}, void 0), this.props.pieceType === 'eyes' && jsx_runtime_1.jsx(eyes_1.default, {}, void 0), this.props.pieceType === 'eyebrows' && jsx_runtime_1.jsx(eyebrow_1.default, {}, void 0), this.props.pieceType === 'mouth' && jsx_runtime_1.jsx(mouth_1.default, {}, void 0), this.props.pieceType === 'nose' && jsx_runtime_1.jsx(nose_1.default, {}, void 0), this.props.pieceType === 'skin' && jsx_runtime_1.jsx(Skin_1.default, { maskID: "5678" }, void 0)] }), void 0));
     };
     return PieceComponent;
 }(React.Component));

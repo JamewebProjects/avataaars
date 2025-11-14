@@ -14,7 +14,19 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __assign = (this && this.__assign) || function () {
+    __assign = Object.assign || function(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+                t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
 Object.defineProperty(exports, "__esModule", { value: true });
+var jsx_runtime_1 = require("react/jsx-runtime");
 var React = require("react");
 var Default = /** @class */ (function (_super) {
     __extends(Default, _super);
@@ -22,8 +34,7 @@ var Default = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     Default.prototype.render = function () {
-        return (React.createElement("g", { id: 'Nose/Default', transform: 'translate(28.000000, 40.000000)', fillOpacity: '0.16' },
-            React.createElement("path", { d: 'M16,8 C16,12.418278 21.372583,16 28,16 L28,16 C34.627417,16 40,12.418278 40,8', id: 'Nose' })));
+        return (jsx_runtime_1.jsx("g", __assign({ id: 'Nose/Default', transform: 'translate(28.000000, 40.000000)', fillOpacity: '0.16' }, { children: jsx_runtime_1.jsx("path", { d: 'M16,8 C16,12.418278 21.372583,16 28,16 L28,16 C34.627417,16 40,12.418278 40,8', id: 'Nose' }, void 0) }), void 0));
     };
     Default.optionValue = 'Default';
     return Default;

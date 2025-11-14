@@ -14,7 +14,19 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __assign = (this && this.__assign) || function () {
+    __assign = Object.assign || function(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+                t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
 Object.defineProperty(exports, "__esModule", { value: true });
+var jsx_runtime_1 = require("react/jsx-runtime");
 var React = require("react");
 var SadConcernedNatural = /** @class */ (function (_super) {
     __extends(SadConcernedNatural, _super);
@@ -22,9 +34,7 @@ var SadConcernedNatural = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     SadConcernedNatural.prototype.render = function () {
-        return (React.createElement("g", { id: 'Eyebrow/Natural/Sad-Concerned-Natural', fillOpacity: '0.599999964' },
-            React.createElement("path", { d: 'M22.7663531,5.57844898 L23.6772984,5.17582144 C28.9190996,3.09473425 36.8645466,3.96712704 41.7227321,6.29911638 C42.2897848,6.57148957 41.9021563,7.4519421 41.3211012,7.40711006 C26.4021788,6.25602197 16.3582869,15.5525942 12.9460869,21.8470939 C12.8449215,22.0337142 12.5391523,22.05489 12.4635344,21.8808353 C10.156283,16.5620676 16.9134476,7.89614725 22.7663531,5.57844898 Z', id: 'Eyebrow', transform: 'translate(27.000000, 13.000000) scale(-1, -1) translate(-27.000000, -13.000000) ' }),
-            React.createElement("path", { d: 'M80.7663531,5.57844898 L81.6772984,5.17582144 C86.9190996,3.09473425 94.8645466,3.96712704 99.7227321,6.29911638 C100.289785,6.57148957 99.9021563,7.4519421 99.3211012,7.40711006 C84.4021788,6.25602197 74.3582869,15.5525942 70.9460869,21.8470939 C70.8449215,22.0337142 70.5391523,22.05489 70.4635344,21.8808353 C68.156283,16.5620676 74.9134476,7.89614725 80.7663531,5.57844898 Z', id: 'Eyebrow', transform: 'translate(85.000000, 13.000000) scale(1, -1) translate(-85.000000, -13.000000) ' })));
+        return (jsx_runtime_1.jsxs("g", __assign({ id: 'Eyebrow/Natural/Sad-Concerned-Natural', fillOpacity: '0.599999964' }, { children: [jsx_runtime_1.jsx("path", { d: 'M22.7663531,5.57844898 L23.6772984,5.17582144 C28.9190996,3.09473425 36.8645466,3.96712704 41.7227321,6.29911638 C42.2897848,6.57148957 41.9021563,7.4519421 41.3211012,7.40711006 C26.4021788,6.25602197 16.3582869,15.5525942 12.9460869,21.8470939 C12.8449215,22.0337142 12.5391523,22.05489 12.4635344,21.8808353 C10.156283,16.5620676 16.9134476,7.89614725 22.7663531,5.57844898 Z', id: 'Eyebrow', transform: 'translate(27.000000, 13.000000) scale(-1, -1) translate(-27.000000, -13.000000) ' }, void 0), jsx_runtime_1.jsx("path", { d: 'M80.7663531,5.57844898 L81.6772984,5.17582144 C86.9190996,3.09473425 94.8645466,3.96712704 99.7227321,6.29911638 C100.289785,6.57148957 99.9021563,7.4519421 99.3211012,7.40711006 C84.4021788,6.25602197 74.3582869,15.5525942 70.9460869,21.8470939 C70.8449215,22.0337142 70.5391523,22.05489 70.4635344,21.8808353 C68.156283,16.5620676 74.9134476,7.89614725 80.7663531,5.57844898 Z', id: 'Eyebrow', transform: 'translate(85.000000, 13.000000) scale(1, -1) translate(-85.000000, -13.000000) ' }, void 0)] }), void 0));
     };
     SadConcernedNatural.optionValue = 'SadConcernedNatural';
     return SadConcernedNatural;

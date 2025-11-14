@@ -14,7 +14,19 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __assign = (this && this.__assign) || function () {
+    __assign = Object.assign || function(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+                t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
 Object.defineProperty(exports, "__esModule", { value: true });
+var jsx_runtime_1 = require("react/jsx-runtime");
 var React = require("react");
 var Disbelief = /** @class */ (function (_super) {
     __extends(Disbelief, _super);
@@ -22,8 +34,7 @@ var Disbelief = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     Disbelief.prototype.render = function () {
-        return (React.createElement("g", { id: 'Mouth/Disbelief', transform: 'translate(2.000000, 52.000000)', fillOpacity: '0.699999988', fill: '#000000' },
-            React.createElement("path", { d: 'M40,15 C40,22.7319865 46.2680135,29 54,29 L54,29 C61.7319865,29 68,22.7319865 68,15', id: 'Mouth', transform: 'translate(54.000000, 22.000000) scale(1, -1) translate(-54.000000, -22.000000) ' })));
+        return (jsx_runtime_1.jsx("g", __assign({ id: 'Mouth/Disbelief', transform: 'translate(2.000000, 52.000000)', fillOpacity: '0.699999988', fill: '#000000' }, { children: jsx_runtime_1.jsx("path", { d: 'M40,15 C40,22.7319865 46.2680135,29 54,29 L54,29 C61.7319865,29 68,22.7319865 68,15', id: 'Mouth', transform: 'translate(54.000000, 22.000000) scale(1, -1) translate(-54.000000, -22.000000) ' }, void 0) }), void 0));
     };
     Disbelief.optionValue = 'Disbelief';
     return Disbelief;
