@@ -14,7 +14,19 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __assign = (this && this.__assign) || function () {
+    __assign = Object.assign || function(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+                t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
 Object.defineProperty(exports, "__esModule", { value: true });
+var jsx_runtime_1 = require("react/jsx-runtime");
 var React = require("react");
 var BeardLight_1 = require("./BeardLight");
 var BeardMajestic_1 = require("./BeardMajestic");
@@ -29,13 +41,7 @@ var FacialHair = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     FacialHair.prototype.render = function () {
-        return (React.createElement(options_1.Selector, { option: options_1.FacialHairOption, defaultOption: Blank_1.default },
-            React.createElement(Blank_1.default, null),
-            React.createElement(BeardMedium_1.default, null),
-            React.createElement(BeardLight_1.default, null),
-            React.createElement(BeardMajestic_1.default, null),
-            React.createElement(MoustacheFancy_1.default, null),
-            React.createElement(MoustacheMagnum_1.default, null)));
+        return (jsx_runtime_1.jsxs(options_1.Selector, __assign({ option: options_1.FacialHairOption, defaultOption: Blank_1.default }, { children: [jsx_runtime_1.jsx(Blank_1.default, {}, void 0), jsx_runtime_1.jsx(BeardMedium_1.default, {}, void 0), jsx_runtime_1.jsx(BeardLight_1.default, {}, void 0), jsx_runtime_1.jsx(BeardMajestic_1.default, {}, void 0), jsx_runtime_1.jsx(MoustacheFancy_1.default, {}, void 0), jsx_runtime_1.jsx(MoustacheMagnum_1.default, {}, void 0)] }), void 0));
     };
     return FacialHair;
 }(React.Component));

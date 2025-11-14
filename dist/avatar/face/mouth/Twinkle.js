@@ -14,7 +14,19 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __assign = (this && this.__assign) || function () {
+    __assign = Object.assign || function(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+                t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
 Object.defineProperty(exports, "__esModule", { value: true });
+var jsx_runtime_1 = require("react/jsx-runtime");
 var React = require("react");
 var Twinkle = /** @class */ (function (_super) {
     __extends(Twinkle, _super);
@@ -22,8 +34,7 @@ var Twinkle = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     Twinkle.prototype.render = function () {
-        return (React.createElement("g", { id: 'Mouth/Twinkle', transform: 'translate(2.000000, 52.000000)', fillOpacity: '0.599999964', fillRule: 'nonzero', fill: '#000000' },
-            React.createElement("path", { d: 'M40,16 C40,21.371763 46.1581544,25 54,25 C61.8418456,25 68,21.371763 68,16 C68,14.8954305 67.050301,14 66,14 C64.7072748,14 64.1302316,14.9051755 64,16 C62.7575758,18.9378973 59.6832595,20.7163149 54,21 C48.3167405,20.7163149 45.2424242,18.9378973 44,16 C43.8697684,14.9051755 43.2927252,14 42,14 C40.949699,14 40,14.8954305 40,16 Z', id: 'Mouth' })));
+        return (jsx_runtime_1.jsx("g", __assign({ id: 'Mouth/Twinkle', transform: 'translate(2.000000, 52.000000)', fillOpacity: '0.599999964', fillRule: 'nonzero', fill: '#000000' }, { children: jsx_runtime_1.jsx("path", { d: 'M40,16 C40,21.371763 46.1581544,25 54,25 C61.8418456,25 68,21.371763 68,16 C68,14.8954305 67.050301,14 66,14 C64.7072748,14 64.1302316,14.9051755 64,16 C62.7575758,18.9378973 59.6832595,20.7163149 54,21 C48.3167405,20.7163149 45.2424242,18.9378973 44,16 C43.8697684,14.9051755 43.2927252,14 42,14 C40.949699,14 40,14.8954305 40,16 Z', id: 'Mouth' }, void 0) }), void 0));
     };
     Twinkle.optionValue = 'Twinkle';
     return Twinkle;

@@ -14,7 +14,19 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __assign = (this && this.__assign) || function () {
+    __assign = Object.assign || function(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+                t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
 Object.defineProperty(exports, "__esModule", { value: true });
+var jsx_runtime_1 = require("react/jsx-runtime");
 var React = require("react");
 var Close_1 = require("./Close");
 var Cry_1 = require("./Cry");
@@ -35,19 +47,7 @@ var Eyes = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     Eyes.prototype.render = function () {
-        return (React.createElement(options_1.Selector, { defaultOption: Default_1.default, option: options_1.EyesOption },
-            React.createElement(Close_1.default, null),
-            React.createElement(Cry_1.default, null),
-            React.createElement(Default_1.default, null),
-            React.createElement(Dizzy_1.default, null),
-            React.createElement(EyeRoll_1.default, null),
-            React.createElement(Happy_1.default, null),
-            React.createElement(Hearts_1.default, null),
-            React.createElement(Side_1.default, null),
-            React.createElement(Squint_1.default, null),
-            React.createElement(Surprised_1.default, null),
-            React.createElement(Wink_1.default, null),
-            React.createElement(WinkWacky_1.default, null)));
+        return (jsx_runtime_1.jsxs(options_1.Selector, __assign({ defaultOption: Default_1.default, option: options_1.EyesOption }, { children: [jsx_runtime_1.jsx(Close_1.default, {}, void 0), jsx_runtime_1.jsx(Cry_1.default, {}, void 0), jsx_runtime_1.jsx(Default_1.default, {}, void 0), jsx_runtime_1.jsx(Dizzy_1.default, {}, void 0), jsx_runtime_1.jsx(EyeRoll_1.default, {}, void 0), jsx_runtime_1.jsx(Happy_1.default, {}, void 0), jsx_runtime_1.jsx(Hearts_1.default, {}, void 0), jsx_runtime_1.jsx(Side_1.default, {}, void 0), jsx_runtime_1.jsx(Squint_1.default, {}, void 0), jsx_runtime_1.jsx(Surprised_1.default, {}, void 0), jsx_runtime_1.jsx(Wink_1.default, {}, void 0), jsx_runtime_1.jsx(WinkWacky_1.default, {}, void 0)] }), void 0));
     };
     return Eyes;
 }(React.Component));

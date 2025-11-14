@@ -14,7 +14,19 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __assign = (this && this.__assign) || function () {
+    __assign = Object.assign || function(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+                t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
 Object.defineProperty(exports, "__esModule", { value: true });
+var jsx_runtime_1 = require("react/jsx-runtime");
 var React = require("react");
 var eyebrow_1 = require("./eyebrow");
 var eyes_1 = require("./eyes");
@@ -26,11 +38,7 @@ var Face = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     Face.prototype.render = function () {
-        return (React.createElement("g", { id: 'Face', transform: 'translate(76.000000, 82.000000)', fill: '#000000' },
-            React.createElement(mouth_1.default, null),
-            React.createElement(Default_1.default, null),
-            React.createElement(eyes_1.default, null),
-            React.createElement(eyebrow_1.default, null)));
+        return (jsx_runtime_1.jsxs("g", __assign({ id: 'Face', transform: 'translate(76.000000, 82.000000)', fill: '#000000' }, { children: [jsx_runtime_1.jsx(mouth_1.default, {}, void 0), jsx_runtime_1.jsx(Default_1.default, {}, void 0), jsx_runtime_1.jsx(eyes_1.default, {}, void 0), jsx_runtime_1.jsx(eyebrow_1.default, {}, void 0)] }), void 0));
     };
     return Face;
 }(React.Component));
