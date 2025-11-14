@@ -16,6 +16,7 @@ export interface Props {
   avatarStyle: AvatarStyle
   className?: string;
   style?: React.CSSProperties
+  backgroundColor?: string
 }
 
 export default class Avatar extends React.Component<Props> {
@@ -28,7 +29,7 @@ export default class Avatar extends React.Component<Props> {
 
   render() {
     const { path1, path2, path3, mask1, mask2, mask3 } = this
-    const { avatarStyle } = this.props
+    const { avatarStyle, backgroundColor = '#65C9FF' } = this.props
     const circle = avatarStyle === AvatarStyle.Circle
     return (
       <svg
@@ -79,7 +80,7 @@ export default class Avatar extends React.Component<Props> {
                   <g
                     id="Color/Palette/Blue-01"
                     mask={'url(#' + mask1 + ')'}
-                    fill="#65C9FF">
+                    fill={backgroundColor}>
                     <rect id="🖍Color" x="0" y="0" width="240" height="240" />
                   </g>
                 </g>

@@ -13,6 +13,7 @@ export interface Props {
   avatarStyle: string
   className?: string;
   style?: React.CSSProperties
+  backgroundColor?: string
   topType?: string
   accessoriesType?: string
   hairColor?: string
@@ -40,17 +41,18 @@ export default class AvatarComponent extends React.Component<Props> {
   componentDidUpdate(prevProps: Props) {
     const hasChanged = allOptions.some(option => {
       return prevProps[option.key] !== this.props[option.key]
-    }) || prevProps.avatarStyle !== this.props.avatarStyle
+    }) || prevProps.avatarStyle !== this.props.avatarStyle ||
+        prevProps.backgroundColor !== this.props.backgroundColor
     if (hasChanged) {
       this.updateOptionContext(this.props)
     }
   }
 
   render() {
-    const { avatarStyle, style, className } = this.props
+    const { avatarStyle, style, className, backgroundColor } = this.props
     return (
       <OptionContextProvider optionContext={this.optionContext}>
-        <Avatar avatarStyle={avatarStyle as AvatarStyle} style={style} className={className} />
+        <Avatar avatarStyle={avatarStyle as AvatarStyle} style={style} className={className} backgroundColor={backgroundColor} />
       </OptionContextProvider>
     )
   }
